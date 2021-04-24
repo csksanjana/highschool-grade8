@@ -1,26 +1,55 @@
-measurement = input("Enter you measurement : ")
-int(measurement)
+# This program converts square units.
+m = input("Enter you measurement : ")
+m = float(m)
 
-cur_unit = input("Enter you Current Unit (km,me,mm) : ")
+cur_unit = input("Enter you Current Unit (km,me,cm,mm) : ")
+tar_unit = input("Enter you Target Unit  (km,me,cm,mm) : ")
 
 print(cur_unit)
 
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-#tar_unit = input("Enter target unit: ")
+# tar_unit = input("Enter target unit: ")
 
 km_mm = 10 ** 12
 me_mm = 10 ** 6
 cm_mm = 10 ** 2
-mmc = 0
-print(km_mm)
+
 if cur_unit == 'km':
-   mmc = measurement * km_mm
+    print(km_mm)
+    mmc = m * km_mm
 elif cur_unit == 'me':
-    mmc = measurement * me_mm
+    print(me_mm)
+    mmc = m * me_mm
 elif cur_unit == 'cm':
-    mmc = measurement * cm_mm
+    print(cm_mm)
+    mmc = m * cm_mm
+elif cur_unit == 'mm':
+    print(cm_mm)
+    mmc = m
 else:
     print("Oppps... your current unit input is wrong")
-exit(0)
+print(f"The MM Conversion {mmc}")
+
+if tar_unit == 'km':
+    output = mmc / km_mm
+elif tar_unit == 'me':
+    output = mmc / me_mm
+elif tar_unit == 'cm':
+    output = mmc / cm_mm
+elif tar_unit == 'mm':
+    output = mmc
+else:
+    print("Oppps... your Target unit input is wrong")
+print(f"The Result is  {output}")
+
+
+
+
+
+
+
+
+
+
+
+
+
